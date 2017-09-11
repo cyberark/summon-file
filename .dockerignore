@@ -1,0 +1,5 @@
+.git
+.godeps
+pkg/*
+summon-file
+junit.xml

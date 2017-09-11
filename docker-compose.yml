@@ -1,0 +1,22 @@
+version: '2'
+services:
+  builder:
+    build: .
+    image: summon-file-builder
+    entrypoint: /usr/local/go/bin/go
+    command: build -v
+    volumes:
+      - ./output:/go/src/github.com/cyberark/summon-file/output
+    environment:
+      GOOS:
+      GOARCH:
+
+  tester:
+    build: .
+    image: summon-file-tester
+    ports:
+        - "8080:8080"
+    entrypoint: /bin/bash
+    command: './test-entrypoint.sh'
+    volumes:
+      - .:/go/src/github.com/cyberark/summon-file
