@@ -41,3 +41,11 @@ AWS_SECRET_ACCESS_KEY=yyyyyyyyyyyyyyyy
 ```
 
 `summon` resolves the entries in secrets.yml with the file provider and makes the secret values available to the environment of the command `env`.
+
+
+## Contributing
+
+We welcome contributions of all kinds to this repository. For instructions on how to get started and descriptions of our development workflows, please see our [contributing
+guide][contrib].
+
+[contrib]: CONTRIBUTING.md
